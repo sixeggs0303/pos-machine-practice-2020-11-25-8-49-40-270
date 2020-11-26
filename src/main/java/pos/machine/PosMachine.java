@@ -23,7 +23,7 @@ public class PosMachine {
     }
 
     private int countItem(List<String> barcodes, String targetBarcode) {
-        return barcodes.stream().filter(o -> o.equals(targetBarcode)).toArray().length;
+        return barcodes.stream().filter(barcode -> barcode.equals(targetBarcode)).toArray().length;
     }
 
     private ItemInfo findItemByBarcode(List<ItemInfo> allItemInfo, String barcode) {
